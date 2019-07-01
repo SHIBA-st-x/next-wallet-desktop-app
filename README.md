@@ -1,6 +1,6 @@
 # NEXT.wallet (public mainnet release)
 
-### Wallet releases
+### Wallet releases (to download)
 
 [3.5.0](https://github.com/NextExchange/next-wallet-desktop-app/releases/3.5.0) 
 
