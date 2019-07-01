@@ -24,7 +24,7 @@ Distributed Ledger Technology (DLT) and blockchains are being adopted on a globa
 <tr> <td>Ticker</td><td>NEXT</td></tr>
 <tr> <td>Algorithm</td><td>SHA256 (X11)</td></tr>
 <tr> <td>Consensus</td><td>Combined Proof-of-Work / Proof-of-Stake</td></tr>
-<tr> <td>Maximum Supply</td><td>30,000,000,000</td></tr>
+<tr> <td>Maximum Supply</td><td>30,000,000</td></tr>
 <tr> <td>Block Time</td><td>30 Seconds</td></tr>
 <tr> <td>Transactions Per Second</td><td>> 10K+</td></tr>
 <tr> <td>Lightning Network</td><td>Yes</td></tr>
