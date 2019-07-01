@@ -1,7 +1,10 @@
 # NEXT.wallet (public mainnet release)
+
 ### Wallet releases
 
 [3.5.0](https://github.com/NextExchange/next-wallet-desktop-app/releases/3.5.0) 
+
+# What is NEXT.exchange?
 
 <p align="center">
  <a href="https://www.reddit.com/r/NextExchange/">
@@ -15,7 +18,6 @@
             alt="follow on Twitter"></a>
 </p>
 
-# What is NEXT.exchange?
 NEXT.exchange is a hybrid digital asset exchange (HEX) that runs on top of its own blockchain technology with a strong focus on providing anyone with convenient access to digital assets.
 
 Distributed Ledger Technology (DLT) and blockchains are being adopted on a global scale. Large and established organizations such as Google, Microsoft, Facebook, Amazon, and Telegram have already disclosed utilizing or developing their own blockchain technology.1 Furthermore, the industry has now been seemingly moving towards tokenized securities; businesses have been looking for ways to adapt and implement digital assets and blockchain in their daily operations. Meanwhile, this expansion needs to be accommodated by a secure and reliable exchange platform. So be part of it and download the wallet.
@@ -35,6 +37,3 @@ Distributed Ledger Technology (DLT) and blockchains are being adopted on a globa
 <tr> <td>Atomic Swap</td><td>Yes</td></tr>
 <tr> <td>IEO</td><td>TBA</td></tr>
 </table>
-
-
-
