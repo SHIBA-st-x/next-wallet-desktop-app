@@ -1,4 +1,7 @@
 # NEXT.wallet (public mainnet release)
+### Wallet releases
+
+[3.5.0](https://github.com/NextExchange/next-wallet-desktop-app/releases/3.5.0) 
 
 <p align="center">
  <a href="https://www.reddit.com/r/NextExchange/">
@@ -34,6 +37,4 @@ Distributed Ledger Technology (DLT) and blockchains are being adopted on a globa
 </table>
 
 
-## Wallet releases
 
-[3.5.0](https://github.com/NextExchange/next-wallet-desktop-app/releases/3.5.0) 
