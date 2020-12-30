@@ -7,8 +7,8 @@ env NEXTCOIND_BIN="/usr/bin/nextcoind"
 env NEXTCOIND_USER="next"
 env NEXTCOIND_GROUP="next"
 env NEXTCOIND_PIDDIR="/var/run/nextcoind"
-# upstart can't handle variables constructed with other variables
 env NEXTCOIND_PIDFILE="/var/run/nextcoind/nextcoind.pid"
+env NEXTCOIND_LOGFILE="/var/log/nextcoin.log"
 env NEXTCOIND_CONFIGFILE="/etc/nextcoin/nextcoin.conf"
 env NEXTCOIND_DATADIR="/var/lib/nextcoind"
 
@@ -61,5 +61,7 @@ exec start-stop-daemon \
     -pid="$NEXTCOIND_PIDFILE" \
     -conf="$NEXTCOIND_CONFIGFILE" \
     -datadir="$NEXTCOIND_DATADIR" \
+    -debuglogfile="$XEPCOIND_LOGFILE" \
+    -shrinkdebuglog \
     -disablewallet \
     -daemon
