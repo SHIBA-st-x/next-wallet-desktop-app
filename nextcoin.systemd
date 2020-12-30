@@ -12,8 +12,8 @@ User=ubuntu
 Group=ubuntu
 Type=forking
 
-Environment=NEXTCOIN_PID=/data/.bitcoin/bitcoin.pid
-Environment=NEXTCOIN_HOME=/data/.bitcoin
+Environment=NEXTCOIN_PID=/data/.nextcoin/nextcoin.pid
+Environment=NEXTCOIN_HOME=/data/.nextcoin
 
 PIDFile=/home/USERNAME/.nextcoin/nextcoind.pid
 
