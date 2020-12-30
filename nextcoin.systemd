@@ -1,4 +1,4 @@
-# Place in /etc/systemd/nextcoind
+# Place in /etc/systemd/system/nextcoind.service
 # sudo systemctl enable nextcoind
 # sudo systemctl start nextcoind
 # sudo systemctl status nextcoind
