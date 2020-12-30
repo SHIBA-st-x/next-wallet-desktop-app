@@ -1,0 +1,31 @@
+# Place in /etc/systemd
+# sudo systemctl enable nextcoind
+# sudo systemctl start nextcoind
+# sudo systemctl status nextcoind
+
+[Unit]
+Description=NEXT daemon
+After=network.target
+
+[Service]
+User=ubuntu
+Group=ubuntu
+Type=forking
+
+Environment=NEXTCOIN_PID=/data/.bitcoin/bitcoin.pid
+Environment=NEXTCOIN_HOME=/data/.bitcoin
+
+PIDFile=/home/USERNAME/.nextcoin/nextcoind.pid
+
+ExecStart=/usr/bin/nextcoind -conf=/data/.nextcoin/nextcoin.conf -pid=/data/.nextcoin/nextcoind.pid
+KillMode=process
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
