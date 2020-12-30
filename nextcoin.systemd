@@ -1,4 +1,4 @@
-# Place in /etc/systemd
+# Place in /etc/systemd/nextcoind
 # sudo systemctl enable nextcoind
 # sudo systemctl start nextcoind
 # sudo systemctl status nextcoind
@@ -12,16 +12,27 @@ User=ubuntu
 Group=ubuntu
 Type=forking
 
-Environment=NEXTCOIN_PID=/data/.nextcoin/nextcoin.pid
-Environment=NEXTCOIN_HOME=/data/.nextcoin
+# The environment
+Environment=NEXTCOIND_BIN=/data/bin/nextcoind
+Environment=NEXTCOIND_PID=/data/run/nextcoind.pid
+Environment=NEXTCOIND_LOGFILE=/data/log/nextcoind.log
+Environment=NEXTCOIND_DATA=/data/lib/.nextcoin
+Environment=NEXTCOIND_CONFIGFILE=/data/etc/nextcoin.conf
 
-PIDFile=/home/USERNAME/.nextcoin/nextcoind.pid
+PIDFile=${NEXTCOIND_PID}
 
-ExecStart=/usr/bin/nextcoind -conf=/data/.nextcoin/nextcoin.conf -pid=/data/.nextcoin/nextcoind.pid
+ExecStart=${NEXTCOIND_BIN} -pid=${NEXTCOIND_PID} -conf=${NEXTCOIND_CONFIGFILE} -datadir=${NEXTCOIND_DATA} -debuglogfile=${NEXTCOIND_LOGFILE} -daemon -shrinkdebuglog -disablewallet
 KillMode=process
-
 Restart=always
+
+# Hardening measures
 PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+NoNewPrivileges=true
+PrivateDevices=true
+MemoryDenyWriteExecute=true
+
 TimeoutStopSec=60s
 TimeoutStartSec=2s
 StartLimitInterval=120s
