@@ -12,16 +12,9 @@ User=ubuntu
 Group=ubuntu
 Type=forking
 
-# The environment
-Environment=NEXTCOIND_BIN=/data/bin/nextcoind
-Environment=NEXTCOIND_PID=/data/run/nextcoind.pid
-Environment=NEXTCOIND_LOGFILE=/data/log/nextcoind.log
-Environment=NEXTCOIND_DATA=/data/lib/.nextcoin
-Environment=NEXTCOIND_CONFIGFILE=/data/etc/nextcoin.conf
-
 PIDFile=${NEXTCOIND_PID}
 
-ExecStart=${NEXTCOIND_BIN} -pid=${NEXTCOIND_PID} -conf=${NEXTCOIND_CONFIGFILE} -datadir=${NEXTCOIND_DATA} -debuglogfile=${NEXTCOIND_LOGFILE} -daemon -shrinkdebuglog -disablewallet
+ExecStart=/data/bin/nextcoind -pid=/data/run/nextcoind.pid -conf=/data/etc/nextcoin.conf -datadir=/data/lib/.nextcoin -debuglogfile=/data/log/nextcoind.log -daemon -disablewallet
 KillMode=process
 Restart=always
 
