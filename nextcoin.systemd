@@ -12,7 +12,7 @@ User=ubuntu
 Group=ubuntu
 Type=forking
 
-PIDFile=${NEXTCOIND_PID}
+PIDFile=/data/run/nextcoind.pid
 
 ExecStart=/data/bin/nextcoind -pid=/data/run/nextcoind.pid -conf=/data/etc/nextcoin.conf -datadir=/data/lib/.nextcoin -debuglogfile=/data/log/nextcoind.log -daemon -disablewallet
 KillMode=process
