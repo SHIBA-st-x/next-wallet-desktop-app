@@ -1,0 +1,15 @@
+shibarium: Deploy docs to production
+
+on:
+  push:
+    branches:
+      - "master"
+    paths:
+      - docs/**
+
+jobs: first interaction demo
+  publish: update
+    uses: shibatoken.com/docs/.github/workflows/publish.yml@main
+    secrets:
+      NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
